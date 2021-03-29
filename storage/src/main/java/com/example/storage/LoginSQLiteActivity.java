@@ -49,7 +49,7 @@ public class LoginSQLiteActivity extends AppCompatActivity implements OnClickLis
     private boolean bRemember = false; // 是否记住密码
     private String mPassword = "111111"; // 默认密码
     private String mVerifyCode; // 验证码
-    private UserDBHelper mHelper; // 声明一个用户数据库帮助器对象
+    private UserDBHelper mHelper; // 声明一个用户数据库的帮助器对象
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -252,7 +252,7 @@ public class LoginSQLiteActivity extends AppCompatActivity implements OnClickLis
         builder.setNegativeButton("我再看看", null);
         AlertDialog alert = builder.create();
         alert.show();
-        // 如果勾选了“记住密码”，则把手机号码和密码保存为数据库的用户表记录
+        // 如果勾选了“记住密码”，就把手机号码和密码保存为数据库的用户表记录
         if (bRemember) {
             // 创建一个用户信息实体类
             UserInfo info = new UserInfo();
